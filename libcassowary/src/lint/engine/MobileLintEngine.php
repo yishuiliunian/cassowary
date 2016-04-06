@@ -74,6 +74,10 @@ final class MobileLintEngine extends ArcanistLintEngine {
                     array(
                         ArcanistTextLinter::LINT_LINE_WRAP =>
                         ArcanistLintSeverity::SEVERITY_ADVICE,
+                        ArcanistTextLinter::LINT_DOS_NEWLINE =>
+                        ArcanistLintSeverity::SEVERITY_DISABLED,
+                        ArcanistTextLinter::LINT_BAD_CHARSET =>
+                        ArcanistLintSeverity::SEVERITY_DISABLED,
                     ))->setMaxLineLength($lintsetting_maxlinelength);
 
         $ios_implementation_paths = preg_grep('/\.m$/', $paths);
@@ -133,6 +137,10 @@ final class MobileLintEngine extends ArcanistLintEngine {
                     array(
                         ArcanistTextLinter::LINT_LINE_WRAP =>
                         ArcanistLintSeverity::SEVERITY_ADVICE,
+                        ArcanistTextLinter::LINT_DOS_NEWLINE =>
+                        ArcanistLintSeverity::SEVERITY_DISABLED,
+                        ArcanistTextLinter::LINT_BAD_CHARSET =>
+                        ArcanistLintSeverity::SEVERITY_DISABLED,
                     ))->setMaxLineLength($lintsetting_maxlinelength);
 
         // locate project directories and run static analysis
